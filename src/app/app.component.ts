@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-toDo';
+  headerTitle = 'Angular to Do'
+  headerSubTitle = 'It works!'
 }
