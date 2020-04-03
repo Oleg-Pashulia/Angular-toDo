@@ -1,0 +1,10 @@
+<div class="container  app-todos">
+    <ul *ngIf="todoList" class="list-group list-group-flush">
+        <app-todos-item *ngFor = "let item of todoList" [todo]="item"></app-todos-item>
+        <!--  -->
+        
+    </ul>
+
+    <div class="text-center" *ngIf="!todoList">No Data.</div>
+</div>
+

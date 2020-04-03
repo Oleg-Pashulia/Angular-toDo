@@ -1,0 +1,23 @@
+<li class="list-group-item">
+    <header>
+        <div>
+            <span class="material-icons">
+                {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
+            </span>
+            <h5 [class.is-done]="todo.isDone">{{todo.title}}</h5>
+        </div>
+
+        <div class="todo-btn-group">
+            <button class="btn btn-primary show-hide-button"
+            [disabled]="!todo.description">
+                show/hide details</button>
+            <button class="btn btn-danger"
+            [disabled]="!todo.description"
+            >delete</button>
+        </div>
+    </header>
+
+    <div>
+        {{todo.description}}
+    </div>
+</li>

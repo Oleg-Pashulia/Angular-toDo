@@ -1,23 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   @Input() title: string; 
   @Input() subTitle: string;
   // title = 'Angular to'
-  isLogined = false;
+  @Output() testOutput = new EventEmitter<string>();
 
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  login():void{
-    this.isLogined =!this.isLogined
-    console.log('LogIn')
+  ngOnDestroy(): void {
+
+  }
+
+  
+
+  log():void{
+    console.log('login')
+    this.testOutput.emit('Header login works')
   }
 }

@@ -1,9 +1,6 @@
-<header class="my-class" [ngClass]="{
-    'first': true,
-    'second': isLogined
-}">
-    <h1>{{title}}</h1>
-    <p>{{subTitle}}</p>
-
-    <button (click)='login()'>Log</button>
+<header class="app-header">
+    <h1 class="title">{{title}}</h1>
+    <p *ngIf='true'
+    class="sub-title">{{subTitle}}</p>
 </header>
+

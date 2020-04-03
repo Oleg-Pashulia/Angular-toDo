@@ -1,2 +1,5 @@
-<app-header [title]="headerTitle" [subTitle]="headerSubTitle"></app-header>
+<app-header [title]="headerTitle" [subTitle]="headerSubTitle" (testOutput)="testOutputApp($event)"></app-header>
+
+<app-todos></app-todos>
+
 <app-footer></app-footer>
