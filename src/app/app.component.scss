@@ -3,6 +3,9 @@
     flex-direction: column;
     height: 100vh;
 }
+app-header{
+    flex: 1 0 auto;
+}
 app-todos{
     flex: 1 0 auto;
 }

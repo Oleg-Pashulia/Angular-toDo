@@ -1,23 +1,37 @@
 <li class="list-group-item">
-    <header>
-        <div>
-            <span class="material-icons">
+    <header class="app-header">
+        <div class="title-icons">
+            <span class="material-icons my-icons"
+                  (click)="toogleTodo()">
                 {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
             </span>
             <h5 [class.is-done]="todo.isDone">{{todo.title}}</h5>
         </div>
 
         <div class="todo-btn-group">
-            <button class="btn btn-primary show-hide-button"
-            [disabled]="!todo.description">
-                show/hide details</button>
-            <button class="btn btn-danger"
+            <button class="btn btn-secondary show-hide-button"
             [disabled]="!todo.description"
-            >delete</button>
+            (click)="toogleDetails()"
+            *ngIf="!isShowDetails">
+                Show Details</button>
+            <button class="btn btn-secondary show-hide-button"
+            [disabled]="!todo.description"
+            (click)="toogleDetails()"
+            *ngIf="isShowDetails">
+                Hide Details</button>
+
+            <button class="btn btn-outline-danger"
+                    (click)="deleteTodo(todo.id)">
+                Delete
+            </button>
         </div>
     </header>
 
-    <div>
-        {{todo.description}}
+    <div *ngIf="isShowDetails">
+        <p class="todo-description"
+        *ngIf="todo.description"
+        >
+        {{todo.description}}</p>
     </div>
+    <hr>
 </li>
