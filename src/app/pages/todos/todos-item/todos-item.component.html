@@ -5,7 +5,20 @@
                   (click)="toogleTodo()">
                 {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
             </span>
-            <h5 [class.is-done]="todo.isDone">{{todo.title}}</h5>
+            
+            <h5 class="title-with-badg"
+                [class.is-done]="todo.isDone"
+                [appHighlight]="'#00FF7F'">
+                {{todo.title}}
+
+                <div class="bad" 
+                      [ngSwitch]="todo.priority">
+                    <span class="badge badge-pill badge-success" *ngSwitchCase="'low'">Low</span>
+                    <span class="badge badge-pill badge-danger" *ngSwitchCase="'hight'">Hight</span>
+                    <span class="badge badge-pill badge-warning" *ngSwitchCase="'middle'">Middle</span>
+                </div>
+               
+            </h5>
         </div>
 
         <div class="todo-btn-group">

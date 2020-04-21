@@ -1,5 +1,9 @@
 <app-header [title]="headerTitle" [subTitle]="headerSubTitle" (testOutput) = "testOutputApp($event)"></app-header>
 
-<app-todos></app-todos>
+<app-navbar></app-navbar>
+
+<div class="for-router">
+    <router-outlet></router-outlet>
+</div>
 
 <app-footer></app-footer>

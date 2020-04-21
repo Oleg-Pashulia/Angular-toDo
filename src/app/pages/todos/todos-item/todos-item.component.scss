@@ -9,12 +9,19 @@
     margin: 0;
 }
 .title-icons{
-    width: 200px;
     display: flex;
 }
 .app-header{
     display: flex;
+    justify-content: space-between;
 }
 .my-icons{
     margin-right: 10px;
+}
+.bad{
+    margin-left: 5px;
+    font-size: 75%;
+}
+.title-with-badg{
+    display: flex;
 }

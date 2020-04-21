@@ -1,0 +1,20 @@
+<div class="row">
+
+    <div class="col"
+         *ngFor="let user of userList">
+        <div class="card user">
+            <img  class="card-img-top"
+              src={{user.picture}}
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+              <p class="card-text">{{user.description.slice(0, 60)}}...</p>
+              <a class="btn btn-primary"
+                        routerLink={{user.id}}>
+                        More Details</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+

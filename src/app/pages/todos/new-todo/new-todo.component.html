@@ -1,4 +1,4 @@
-<div class="app-new-todo">
+<div class="container app-new-todo">
     <form [formGroup]="newTodoForm"
           (ngSubmit)="onSubmit()"
           class="needs-validation">
@@ -36,6 +36,28 @@
                 <span *ngIf="newTodoForm.get('description').errors.minlength">Description min length is 4.</span>
             </div>
         </div>
+
+        <div class="radio-badgets">
+          <input type="radio"  
+            value="low"
+            formControlName="priority"
+            >Low
+          <input type="radio" 
+            value="middle"
+            formControlName="priority"
+            >Middle
+          <input type="radio"  
+            value="hight"
+            formControlName="priority"
+            >Hight
+        </div>
+
+        <div *ngIf = "isSubmit && newTodoForm.get('priority').invalid" class="text-danger">
+            <span>Select one of the options.</span>
+        </div>
+        
+        
+
         <!-- [disabled]="newTodoForm.invalid" -->
         <footer class="footer-btn">
             <button class="btn btn-primary btn-lg"

@@ -13,6 +13,7 @@ export class NewTodoComponent implements OnInit {
   
   newTodoForm: FormGroup;
   isSubmit = false;
+  myModel = "low"
 
   constructor(
     private fb: FormBuilder
@@ -50,7 +51,12 @@ export class NewTodoComponent implements OnInit {
           Validators.minLength(4)
         ]
       ],
-      isDone: [false]
+      isDone: [false],
+      priority: [
+        '',
+        Validators.required
+      ]
+      
     })
   } 
 }

@@ -1,10 +1,49 @@
-<div class="container  app-todos">
+<div class="container app-todos">
     <app-new-todo (newTodo)="addTodo($event)">
 
     </app-new-todo>
+    
+    <form class="container form-priority">
 
-    <ul *ngIf="todoList" class="list-group list-group-flush">
-        <app-todos-item *ngFor = "let item of todoList" 
+        <div class="form-group form-inputs">
+          <input class="form-control"
+                 name="search"
+                 type="text"
+                 placeholder="Search..."
+                 autocomplete="off"
+                 [(ngModel)]="search" />
+        </div>
+
+        <div class="form-inputs">
+            <div>
+                <input type="radio"
+                       value="low"
+                       name="filterPriority"
+                       [(ngModel)]="filterPrority" 
+                       >Low
+                <input type="radio"
+                       value="middle"
+                       name="filterPriority"
+                       [(ngModel)]="filterPrority" 
+                       >Middle
+                <input type="radio"
+                       name="filterPriority"
+                       value="hight"
+                       [(ngModel)]="filterPrority" 
+                       >Hight
+                <input type="radio"
+                       name="filterPriority"
+                       [(ngModel)]="filterPrority" 
+                       value=""
+                       >All
+            </div>
+        </div>
+    </form>
+
+    <ul *ngIf="todoList" 
+        class="list-group list-group-flush">
+        
+        <app-todos-item *ngFor = "let item of todoList | filterBySearch:search | filterTodo:filterPrority" 
                         [todo]="item"
                         (delete)="deleteTodo($event)"
                         (update)="updateTodo($event)">

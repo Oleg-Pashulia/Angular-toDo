@@ -4,19 +4,72 @@
       "id": 1,
       "title": "Angular",
       "description": null,
+      "priority": "middle",
       "isDone": false
     },
     {
       "id": 2,
       "title": "JavaScript",
       "description": "Test Description Text",
-      "isDone": false
+      "priority": "low",
+      "isDone": true
     },
     {
       "title": "SCSS",
-      "description": "dont know",
-      "isDone": true,
-      "id": 3
+      "description": "wwww",
+      "isDone": false,
+      "priority": "hight",
+      "id": 4
+    },
+    {
+      "title": "Type Script ",
+      "description": "fairy tail",
+      "isDone": false,
+      "priority": "hight",
+      "id": 5
+    },
+    {
+      "title": "indexOf",
+      "description": "Array",
+      "isDone": false,
+      "priority": "middle",
+      "id": 6
+    },
+    {
+      "title": "filter()",
+      "description": "Arrat",
+      "isDone": null,
+      "priority": "low",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Juliane",
+      "lastName": "Rocha",
+      "picture": "https://randomuser.me/api/portraits/women/94.jpg",
+      "email": "juliane.rocha@example.com",
+      "phone": "(20) 4735-2156",
+      "description": "Authoritatively expedite error-free outsourcing without distinctive opportunities. Interactively exploit one-to-one value with best-of-breed portals. Continually productize resource sucking ROI and clicks-and-mortar initiatives. Progressively utilize equity invested deliverables and maintainable ROI. Dramatically transform transparent infrastructures through bricks-and-clicks solutions."
+    },
+    {
+      "id": 2,
+      "firstName": "Vincent",
+      "lastName": "Weidinger",
+      "picture": "https://randomuser.me/api/portraits/men/4.jpg",
+      "email": "vincent.weidinger@example.com",
+      "phone": "0923-7611486",
+      "description": "Collaboratively initiate strategic infrastructures rather than high-payoff functionalities. Enthusiastically visualize sticky supply chains and premium communities. Phosfluorescently myocardinate covalent opportunities through exceptional web-readiness. Professionally grow ubiquitous users via seamless initiatives. Phosfluorescently simplify highly efficient 'outside the box' thinking after multifunctional scenarios."
+    },
+    {
+      "id": 3,
+      "firstName": "Sadie",
+      "lastName": "Williams",
+      "picture": "https://randomuser.me/api/portraits/women/88.jpg",
+      "email": "sadie.williams@example.com",
+      "phone": "(996)-614-2353",
+      "description": "Continually whiteboard transparent core competencies before ubiquitous bandwidth. Distinctively redefine open-source partnerships and cost effective applications. Objectively pontificate cross functional strategic theme areas after stand-alone materials. Authoritatively pontificate progressive ROI for excellent products. Compellingly predominate state of the art ideas whereas state of the art leadership skills."
     }
   ]
 }

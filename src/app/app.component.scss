@@ -3,12 +3,16 @@
     flex-direction: column;
     height: 100vh;
 }
-app-header{
-    flex: 1 0 auto;
-}
-app-todos{
+.for-router{
     flex: 1 0 auto;
 }
 app-footer{
     flex: 0 0 auto;
+}
+.active{
+    color: red;
+
+    a{
+        color: red;
+    }
 }
