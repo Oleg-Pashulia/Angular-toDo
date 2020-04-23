@@ -23,7 +23,7 @@ export class NewTodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.createNewTodoForm();
-    console.log(this.todoData)
+    // console.log(this.todoData)
   }
 
   onSubmit(): void {
@@ -48,6 +48,10 @@ export class NewTodoComponent implements OnInit {
   private createNewTodoForm(): void {
     this.newTodoForm = this.fb.group({
 
+      id: [
+        this.todoData ? this.todoData.id  : null,
+      ],
+
       title: [
         this.todoData ? this.todoData.title  : '',
         [
@@ -62,7 +66,9 @@ export class NewTodoComponent implements OnInit {
           Validators.minLength(4)
         ]
       ],
-      isDone: [false],
+      isDone: [
+      this.todoData ? this.todoData.isDone : false
+      ],
       priority: [
         this.todoData ? this.todoData.priority : '',
         Validators.required

@@ -26,7 +26,7 @@ export class TodosItemComponent implements OnInit {
 
   toogleTodo(): void {
     this.todo.isDone = !this.todo.isDone;
-    this.update.emit(this.todo)
+    this.updateTodo(this.todo)
   }
 
   deleteTodo(todoId: number): void {
@@ -37,8 +37,8 @@ export class TodosItemComponent implements OnInit {
     this.isShowDetails =!this.isShowDetails;
   }
 
-  updateEditedTodo(): void {
-    this.update.emit(this.todo)
+  updateTodo(todo: Todo): void {
+    this.update.emit(todo)
   }
 
   openModal() {
@@ -48,7 +48,7 @@ export class TodosItemComponent implements OnInit {
         ignoreBackdropClick: true,
         initialState: {
           todoData: this.todo,
-           
+          submit: this.updateTodo.bind(this)
 
         }
       }) 

@@ -1,10 +1,16 @@
 <p>user works! {{userId}}</p>
-<div *ngIf="user">{{user.firstName}}
-    <img src=""
+<div *ngIf="user">{{user.firstName}} {{user.lastName}}
+    <div>
+       {{user.phone}}
+    </div>
+    <img [src]="user.picture"
          alt="">
 
          <div>
              {{user.email}}
+         </div>
+         <div>
+             {{user.description}}
          </div>
 </div>
 
