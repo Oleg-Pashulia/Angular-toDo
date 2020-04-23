@@ -1,5 +1,17 @@
-<div class="container app-new-todo">
-    <form [formGroup]="newTodoForm"
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Todo</h4>
+    <button type="button" 
+            class="close pull-right" 
+            aria-label="Close" 
+            (click)="hideModal()">
+
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="container app-new-todo">
+      <form [formGroup]="newTodoForm"
           (ngSubmit)="onSubmit()"
           class="needs-validation">
 
@@ -15,10 +27,7 @@
                 <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
                 <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length is 4.</span>
             </div>
-            <!-- <div *ngIf = "newTodoForm.get('title').invalid && (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)">
-                <span *ngIf="newTodoForm.get('title').errors.required" >Input is required.</span>
-                <span *ngIf="newTodoForm.get('title').errors.minlength" >Input min length is 4.</span>
-            </div> -->
+            
         </div>
 
         <div class="form-group">
@@ -56,8 +65,6 @@
             <span>Select one of the options.</span>
         </div>
         
-        
-
         <!-- [disabled]="newTodoForm.invalid" -->
         <footer class="footer-btn">
             <button class="btn btn-primary btn-lg"
@@ -66,6 +73,11 @@
             Save
             </button>
         </footer>
-    </form>
-    
+    </form>  
+  </div>
 </div>
+    
+ 
+
+
+

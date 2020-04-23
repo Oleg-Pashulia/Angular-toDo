@@ -1,7 +1,15 @@
 <div class="container app-todos">
-    <app-new-todo (newTodo)="addTodo($event)">
+    <!-- <app-new-todo (newTodo)="addTodo($event)">
 
-    </app-new-todo>
+    </app-new-todo> -->
+    <div class="todo-button">
+        <button type="button"
+            class="btn btn-outline-dark btn-lg" 
+            (click)="openModal()">
+            Create New Todo
+        </button>
+    </div>
+    
     
     <form class="container form-priority">
 
@@ -39,7 +47,7 @@
             </div>
         </div>
     </form>
-
+ 
     <ul *ngIf="todoList" 
         class="list-group list-group-flush">
         
@@ -57,9 +65,12 @@
         No Data.
     </div>
 
+
     <div class="text-center" 
-         *ngIf="!todoList.length">
-        Todo list is empty. Please create your first todo.
+    *ngIf="todoList && !todoList.length">
+    Todo list is empty. Please create your first todo.
     </div>
+    
 </div>
+
 

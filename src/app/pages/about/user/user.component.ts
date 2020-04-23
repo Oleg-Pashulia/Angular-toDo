@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Users } from 'src/app/core/interfaces/users.interface';
 import { UsersService } from 'src/app/core/services/users/users.service';
+import { EventEmitter } from 'events';
 
 
 @Component({
@@ -12,9 +13,10 @@ import { UsersService } from 'src/app/core/services/users/users.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit, OnDestroy {
-  userId: number;
-  user: Users;
-  userList: Array<Users>
+  userId: number; //undefined
+  user: Users; //und
+  
+  
 
   private unsubscribe = new Subject();
 
@@ -25,7 +27,6 @@ export class UserComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
    this.getUserId();
-   this.getUsers();
   }
 
   ngOnDestroy() {
@@ -35,20 +36,28 @@ export class UserComponent implements OnInit, OnDestroy {
 
   private getUserId(): void {
     this.activatedRuote.params
-    .pipe(takeUntil(this.unsubscribe))
-    .subscribe(
-      params => {
+    .pipe(takeUntil(this.unsubscribe)) //arg
+    .subscribe(params => {
         // console.log(params)
         this.userId = params.userId;
+        this.getUser(this.userId);
       }
     );
   }
 
-  getUsers(): void {
-    this.usersService.getUsers()
-    .subscribe(data => {
-      this.userList = data;
+  getUser(userId: number): void {
+    this.usersService.getUser(userId)
+    .subscribe(user=>{
+      this.user = user;  
     });
   }
+
+
+  // private getUsers(): void {
+  //   this.usersService.getUsers()
+  //   .subscribe(data => {
+  //     this.userList = data;
+  //   });
+  // }
 
 }

@@ -22,25 +22,11 @@
       "id": 4
     },
     {
-      "title": "Type Script ",
-      "description": "fairy tail",
-      "isDone": false,
-      "priority": "hight",
-      "id": 5
-    },
-    {
-      "title": "indexOf",
-      "description": "Array",
+      "title": "Vue.js",
+      "description": "weee",
       "isDone": false,
       "priority": "middle",
-      "id": 6
-    },
-    {
-      "title": "filter()",
-      "description": "Arrat",
-      "isDone": null,
-      "priority": "low",
-      "id": 7
+      "id": 5
     }
   ],
   "users": [

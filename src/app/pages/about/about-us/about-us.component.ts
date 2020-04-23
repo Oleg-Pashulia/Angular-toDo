@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Users } from 'src/app/core/interfaces/users.interface';
 import { UsersService } from 'src/app/core/services/users/users.service';
-import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-about-us',
@@ -24,7 +23,6 @@ export class AboutUsComponent implements OnInit {
     this.usersService.getUsers()
     .subscribe(data => {
       this.userList = data;
-      // console.log(data)
     },
     error =>{
       console.log(error);

@@ -1,27 +1,33 @@
-.is-done{
+.is-done {
     text-decoration: line-through;
 }
-.show-hide-button{
-    margin-right: 3px;
+.show-hide-button, .edit-button {
+    margin-right: 4px;
 }
-.todo-description{
+.edit-button {
+    width: 70px;
+}
+.todo-description {
     padding-top: 10px;
     margin: 0;
 }
-.title-icons{
+.title-icons {
     display: flex;
 }
-.app-header{
+.app-header {
     display: flex;
     justify-content: space-between;
 }
-.my-icons{
+.my-icons {
     margin-right: 10px;
 }
-.bad{
+.bad {
     margin-left: 5px;
     font-size: 75%;
 }
-.title-with-badg{
+.title-with-badg {
     display: flex;
+}
+.btn {
+    font-weight: 900;
 }

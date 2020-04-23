@@ -16,7 +16,7 @@ export class UsersService {
   getUsers(): Observable<Array<Users>> {
     return this.http.get<Array<Users>>(this.url) 
   }
-  getUser(userId: number): Observable<Array<Users>> {
-    return this.http.get<Array<Users>>(`${this.url}/${userId}`) 
+  getUser(userId: number): Observable<Users> {
+    return this.http.get<Users>(`${this.url}/${userId}`) 
   }    
 }

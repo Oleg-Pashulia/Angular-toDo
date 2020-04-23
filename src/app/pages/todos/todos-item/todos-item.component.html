@@ -22,16 +22,25 @@
         </div>
 
         <div class="todo-btn-group">
+
             <button class="btn btn-secondary show-hide-button"
             [disabled]="!todo.description"
             (click)="toogleDetails()"
             *ngIf="!isShowDetails">
-                Show Details</button>
+                Show Details
+            </button>
+
             <button class="btn btn-secondary show-hide-button"
-            [disabled]="!todo.description"
-            (click)="toogleDetails()"
-            *ngIf="isShowDetails">
-                Hide Details</button>
+                [disabled]="!todo.description"
+                (click)="toogleDetails()"
+                *ngIf="isShowDetails">
+                Hide Details
+            </button>
+
+            <button class="btn btn-outline-success edit-button"
+                    (click)="openModal()">
+                Edit
+            </button>
 
             <button class="btn btn-outline-danger"
                     (click)="deleteTodo(todo.id)">
