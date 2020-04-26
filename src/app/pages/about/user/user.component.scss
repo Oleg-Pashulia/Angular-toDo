@@ -1,0 +1,56 @@
+.user-main {
+    margin: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+.user-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.user-data {
+    display: flex;
+}
+.user-text {
+    padding: 20px 40px;
+    font-size: 20px;
+}
+.user-desc {
+    margin-top: 20px;
+    width: 70%;
+}
+@media screen and (max-width: 767px) {
+    .user-data {
+        display: block;
+    }
+    .user-text {
+        padding: 20px 0;
+        font-size: 18px;
+    }
+    .user-desc {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .user-text {
+        font-size: 15px;
+    }
+    .user-main {
+        margin: 30px 0;
+    }
+    .user-photo-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .user-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 280px) {
+    .user-text {
+        font-size: 12px;
+    }
+}

@@ -4,7 +4,7 @@
     </app-new-todo> -->
     <div class="todo-button">
         <button type="button"
-            class="btn btn-outline-dark btn-lg" 
+            class="btn btn-outline-dark btn-lg to-lg" 
             (click)="openModal()">
             Create New Todo
         </button>
@@ -23,27 +23,47 @@
         </div>
 
         <div class="form-inputs">
-            <div>
-                <input type="radio"
-                       value="low"
-                       name="filterPriority"
-                       [(ngModel)]="filterPrority" 
-                       >Low
-                <input type="radio"
-                       value="middle"
-                       name="filterPriority"
-                       [(ngModel)]="filterPrority" 
-                       >Middle
-                <input type="radio"
-                       name="filterPriority"
-                       value="hight"
-                       [(ngModel)]="filterPrority" 
-                       >Hight
-                <input type="radio"
-                       name="filterPriority"
-                       [(ngModel)]="filterPrority" 
-                       value=""
-                       >All
+            <div class="priority">
+
+                <div class="low-p">
+                    <input  type="radio"
+                            id="low-p"
+                            value="low"
+                            name="filterPriority"
+                            [(ngModel)]="filterPrority">
+
+                    <label for="low-p">Low</label>
+                </div>
+
+               <div class="middle-p">
+                    <input  type="radio"
+                            id="middle-p"
+                            value="middle"
+                            name="filterPriority"
+                            [(ngModel)]="filterPrority">
+
+                    <label for="middle-p">Middle</label>
+               </div>
+
+                <div class="hight-p">
+                    <input  type="radio"
+                            id="hight-p"
+                            name="filterPriority"
+                            value="hight"
+                            [(ngModel)]="filterPrority">
+
+                    <label for="hight-p">Hight</label>
+                </div>
+
+               <div class="all">
+                    <input  type="radio"
+                            id="all"
+                            name="filterPriority"
+                            [(ngModel)]="filterPrority" 
+                            value="">
+
+                    <label for="all">All</label>
+               </div>
             </div>
         </div>
     </form>

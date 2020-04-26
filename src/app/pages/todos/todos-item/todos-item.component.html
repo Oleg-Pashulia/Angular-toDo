@@ -23,14 +23,14 @@
 
         <div class="todo-btn-group">
 
-            <button class="btn btn-secondary show-hide-button"
+            <button class="btn btn-info show-hide-button"
             [disabled]="!todo.description"
             (click)="toogleDetails()"
             *ngIf="!isShowDetails">
                 Show Details
             </button>
 
-            <button class="btn btn-secondary show-hide-button"
+            <button class="btn btn-info show-hide-button"
                 [disabled]="!todo.description"
                 (click)="toogleDetails()"
                 *ngIf="isShowDetails">

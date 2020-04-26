@@ -47,18 +47,34 @@
         </div>
 
         <div class="radio-badgets">
-          <input type="radio"  
-            value="low"
-            formControlName="priority"
-            >Low
-          <input type="radio" 
-            value="middle"
-            formControlName="priority"
-            >Middle
-          <input type="radio"  
-            value="hight"
-            formControlName="priority"
-            >Hight
+
+            <div class="low">
+                <input  type="radio"
+                        id="low"  
+                        value="low"
+                        formControlName="priority">
+
+                <label for="low">Low</label>
+            </div>
+
+            <div class="middle">
+                <input  type="radio"
+                        id="middle" 
+                        value="middle"
+                        formControlName="priority">
+
+                <label for="middle">Middle</label>
+            </div>
+
+            <div class="hight">
+                <input  type="radio"
+                        id="hight"  
+                        value="hight"
+                        formControlName="priority">
+
+                <label for="hight">Hight</label>
+            </div>
+            
         </div>
 
         <div *ngIf = "isSubmit && newTodoForm.get('priority').invalid" class="text-danger">

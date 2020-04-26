@@ -1,18 +1,18 @@
-:host{
+:host {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
-.for-router{
+.for-router {
     flex: 1 0 auto;
 }
-app-footer{
+app-footer {
     flex: 0 0 auto;
 }
-.active{
+.active {
     color: red;
 
-    a{
+    a {
         color: red;
     }
 }

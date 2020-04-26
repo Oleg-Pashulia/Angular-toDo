@@ -1,9 +1,39 @@
-.app-header{
+.app-header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 200px;
-    background-color: #4169e1;
+    background-color: #2F4F4F;
+    font-family: 'Raleway', sans-serif;
     color: #fff;
+}
+.title {
+    font-weight: 1000;
+}
+.sub-title {
+    font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+    .app-header {
+        min-height: 150px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .app-header {
+        min-height: 110px;
+    }
+}
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 244px) {
+    p {
+        font-size: 10px;
+    }
 }

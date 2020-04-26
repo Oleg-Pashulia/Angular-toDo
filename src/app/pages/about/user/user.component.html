@@ -1,16 +1,37 @@
-<p>user works! {{userId}}</p>
-<div *ngIf="user">{{user.firstName}} {{user.lastName}}
-    <div>
-       {{user.phone}}
+<div *ngIf="user"
+      class="user-main">
+    
+    <div class="user-data">
+        <div class="user-photo-div">
+            <img [src]="user.picture"
+            alt="" class="user-photo">
+        </div>
+        
+        <div class="user-text">
+            <div>
+                <b>{{user.firstName}} {{user.lastName}}</b>
+            </div>   
+          
+            <div>
+                <b>Phone Number : {{user.phone}}</b> 
+            </div>
+          
+            <div>
+                <b>Email : {{user.email}}</b>
+            </div>
+        </div>     
+       
     </div>
-    <img [src]="user.picture"
-         alt="">
 
-         <div>
-             {{user.email}}
-         </div>
-         <div>
-             {{user.description}}
-         </div>
+    <div class="user-desc">
+        <p><b>My story</b></p>
+      <p>{{user.description}}</p>
+      
+    </div>
+
+    <button class="btn btn-dark"
+            routerLink="/about/about-us">
+            Back
+    </button>
 </div>
 

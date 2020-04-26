@@ -1,7 +1,26 @@
 .user {
-    margin: 20px 0;
+    margin: 40px 0;
     max-width: 220px;
 }
 .row {
     flex-wrap: wrap;
+}
+.col {
+    flex-wrap: wrap;
+}
+.card-short-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+//   -moz-line-clamp: 2;
+//   -moz-box-orient: vertical;
+}
+
+@media screen and (max-width: 480px) {
+    .row {
+        flex-direction: column;
+    }
+    
 }

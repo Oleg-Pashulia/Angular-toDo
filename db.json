@@ -2,38 +2,24 @@
   "todos": [
     {
       "id": 1,
-      "title": "Angular",
+      "title": "Angular9",
       "description": "Step",
-      "isDone": false,
-      "priority": "hight"
+      "isDone": true,
+      "priority": "middle"
     },
     {
       "id": 2,
       "title": "JavaScript2",
       "description": "Test Description Text",
       "isDone": true,
-      "priority": "low"
+      "priority": "hight"
     },
     {
       "id": 5,
       "title": "Vue.js146",
-      "description": "weee",
-      "isDone": true,
+      "description": "weew",
+      "isDone": false,
       "priority": "low"
-    },
-    {
-      "title": "sdsfd",
-      "description": "dafdda",
-      "isDone": false,
-      "priority": "hight",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "title": "3333",
-      "description": "ddsd",
-      "isDone": false,
-      "priority": "middle"
     },
     {
       "id": 8,
@@ -41,6 +27,34 @@
       "description": "bear",
       "isDone": true,
       "priority": "hight"
+    },
+    {
+      "id": 9,
+      "title": "dhdhd1212",
+      "description": "dkdkddddddd",
+      "isDone": false,
+      "priority": "middle"
+    },
+    {
+      "id": 10,
+      "title": "GIT.",
+      "description": "Today",
+      "isDone": false,
+      "priority": "middle"
+    },
+    {
+      "id": 11,
+      "title": "ahdkjas sjsjs jsjsjs jsjs22",
+      "description": "s,s,s",
+      "isDone": true,
+      "priority": "low"
+    },
+    {
+      "id": 12,
+      "title": "Stop",
+      "description": "stop",
+      "isDone": false,
+      "priority": "low"
     }
   ],
   "users": [

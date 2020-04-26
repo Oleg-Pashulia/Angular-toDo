@@ -1,5 +1,16 @@
 footer{
-    height: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    background-color: #4169e1;
+    background-color: darkslategray;
+    font-family: 'Raleway', sans-serif;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

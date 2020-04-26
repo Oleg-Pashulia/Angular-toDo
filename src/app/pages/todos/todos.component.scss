@@ -1,11 +1,14 @@
-.form-priority{
+.app-todos {
+    font-family: 'Raleway', sans-serif;
+}
+.form-priority {
     display: flex;
     margin-top: 30px;
     margin-bottom: 20px;
     
     padding-right: 30px;
 }
-.form-inputs{
+.form-inputs {
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -20,4 +23,203 @@
 .btn {
     font-weight: 900;
     border: 3px solid black;
+}
+.priority {
+    font-size: 20px;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+}
+
+.low-p {
+    margin: 0 30px;
+    position: relative;
+}
+.low-p input {
+    display: none;
+}
+.low-p label {
+    cursor: pointer;
+}
+.low-p label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #0aac83;
+    border-radius: 50%;
+}
+.low-p label::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: -66.5%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #0aac83;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.low-p input:checked ~ label::before {
+    opacity: 1;
+}
+
+.middle-p {
+    margin: 0 30px;
+    position: relative;
+}
+.middle-p input {
+    display: none;
+}
+.middle-p label {
+    cursor: pointer;
+}
+.middle-p label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+}
+.middle-p label::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: -40.5%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.middle-p input:checked ~ label::before {
+    opacity: 1;
+}
+
+.hight-p {
+    margin: 0 30px;
+    position: relative;
+}
+.hight-p input {
+    display: none;
+}
+.hight-p label {
+    cursor: pointer;
+}
+.hight-p label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #FF4500;
+    border-radius: 50%;
+}
+.hight-p label::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: -52%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #FF4500;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.hight-p input:checked ~ label::before {
+    opacity: 1;
+}
+
+.all {
+    margin-left: 30px;
+    position: relative;
+}
+.all input {
+    display: none;
+}
+.all label {
+    cursor: pointer;
+}
+.all label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+.all label::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: -106%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.all input:checked ~ label::before {
+    opacity: 1;
+}
+@media screen and (max-width: 992px) {
+    .form-priority {
+        display: block;
+    }
+   
+    .form-inputs {
+        width: 100%;
+        justify-content: center;
+    
+    }
+    .todo-button {
+        width: 100%;
+    }
+    .hight-p label::before, 
+    .low-p label::before, 
+    .middle-p label::before, 
+    .all label::before {
+        top: 39%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .priority {
+        display: block;
+        
+    }
+    .form-inputs {
+        justify-content: flex-start;
+
+        .low-p label::before, 
+        .hight-p label::before {
+            left: -40.5%;
+        }
+        .all label::before {
+            left: -27.5%;
+        }
+    }
+}
+@media screen and (max-width: 290px) {
+    .to-lg {
+        font-size: 15px;
+    }
+    .container {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
 }

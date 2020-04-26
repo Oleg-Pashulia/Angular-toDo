@@ -1,0 +1,14 @@
+.tex{
+    margin: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 767px) {
+    .tex {
+        margin: 20px 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .tex {
+        margin: 20px 0;
+    }
+}

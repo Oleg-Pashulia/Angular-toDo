@@ -1,6 +1,43 @@
+.phone-nav {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+
+    .active {
+        color: darkslategray;
+        font-weight: 1000;
+    }
+
+    nav {
+        padding: 24px 0;
+        border-bottom: 1px solid #c1c1c1;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-weight: 1000;
+    }
+
+    a {
+        // display: block;
+        padding: 12px 24px;
+        color: #c1c1c1;
+        font-size: 20px;
+        font-weight: bolder;
+
+        &:hover {
+            color: #333;
+            list-style: none;
+            text-decoration: none;
+        }
+    }
+
+}
 .app-about {
     display: flex;
     min-height: 100%;
+    font-family: 'Raleway', sans-serif;
 
     nav {
         padding: 24px 0;
@@ -11,19 +48,52 @@
         margin: 0;
         padding: 0;
         list-style: none;
+        font-weight: 1000;
     }
 
     .active {
-        color: #333;
+        color: darkslategray;
+        font-weight: 1000;
     }
 
     a {
         display: block;
         padding: 12px 24px;
         color: #c1c1c1;
+        font-size: 20px;
+        font-weight: bolder;
 
         &:hover {
             color: #333;
+            list-style: none;
+            text-decoration: none;
+        }
+    }
+}
+.phone-nav {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .app-about {
+        nav {
+            display: none;
+        }
+    }
+    .phone-nav {
+        display: block;
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            font-size: 17px;
+            // display: block;
+            padding: 10px 10px;
+        }
+
+        nav {
+            padding: 10px 0;
         }
     }
 }

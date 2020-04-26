@@ -7,6 +7,134 @@
     justify-content: flex-end;
 }
 .radio-badgets{
-    font-size: 17px;
+    font-size: 20px;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
 }
-    
+
+.low {
+    margin: 0 30px;
+    position: relative;
+}
+.low input {
+    display: none;
+}
+.low label {
+    cursor: pointer;
+}
+.low label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #0aac83;
+    border-radius: 50%;
+}
+.low label::before {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: -65%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #0aac83;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.low input:checked ~ label::before {
+    opacity: 1;
+}
+
+.middle {
+    margin: 0 30px;
+    position: relative;
+}
+.middle input {
+    display: none;
+}
+.middle label {
+    cursor: pointer;
+}
+.middle label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+}
+.middle label::before {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: -41%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.middle input:checked ~ label::before {
+    opacity: 1;
+}
+
+.hight {
+    margin: 0 30px;
+    position: relative;
+}
+.hight input {
+    display: none;
+}
+.hight label {
+    cursor: pointer;
+}
+.hight label::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: -31px;
+    border: 2px solid #FF4500;
+    border-radius: 50%;
+}
+.hight label::before {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: -52%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #FF4500;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+}
+.hight input:checked ~ label::before {
+    opacity: 1;
+}
+@media screen and (max-width: 400px) {
+    .radio-badgets {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .low label::before {
+        left: -65.5%;
+    }
+    .middle label::before {
+        left: -40.5%;
+    }
+    .hight label::before {
+        left: -51.5%;
+    }
+}
